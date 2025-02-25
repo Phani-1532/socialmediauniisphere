@@ -1,174 +1,254 @@
 .right-sidebar {
-    background: #f6f4e8; /* Light pastel cream background */
-    border-radius: 20px;
-    padding: 20px;
-    width: 320px;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-  }
-  
-  .right-sidebar::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Subtle texture */
-    opacity: 0.1;
-    top: 0;
-    left: 0;
-  }
-  
-  .profile-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Push text left and buttons right */
-    padding: 15px;
+  background: #f6f4e8; /* Light pastel cream background */
+  width: 320px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
     border-radius: 15px;
-    position: relative;
+    padding: 20px;
+    box-shadow: 1px 2px 4px 6px rgba(0, 0, 0, 0.08), 
+                 0px 0px 1px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Push text left and buttons right */
+  border-radius: 15px;
+  position: relative;
 }
 
 .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px; /* Space between profile image and text */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px; /* Space between profile image and text */
+  text-align: left;
 }
 
 .profile-pic { 
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+  width: 65px !important;
+  height: 65px !important;
+  border-radius: 50%;
 }
 
 .profile-info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-section{
-    display: flex;
-    gap: 25px;
-
+  display: flex;
+  gap: 25px;
 }
 
 .user-name {
-    font-size: 23px;
-    font-weight: bold;
-    margin: 0;
+  font-size: 23px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.user-designation{
+  font-weight: 600;
+  color: black !important;
+  font-size: 16px !important;
 }
 
 .user-designation,
 .user-location {
-    font-size: 12px;
-    color: gray;
-    margin: 0;
+  font-size: 12px;
+  color: gray;
+  margin: 0;
 }
 
 .user-bio {
-    font-size: 12px;
-    margin-top: 5px;
-    max-width: 250px; /* Prevents long text overflow */
+  font-size: 12px;
+  margin-top: 5px;
+  max-width: 250px; /* Prevents long text overflow */
 }
 
 .see-more {
-    color: #007bff;
-    cursor: pointer;
+  color: #007bff;
+  cursor: pointer;
 }
 
 /* Adjusted right-side layout */
 .follow-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Aligns followers & buttons to the right */
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns followers & buttons to the right */
+  gap: 10px;
 }
 
 .follow-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    font-size: 14px;
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .connect-buttons {
-    display: flex;
-    align-items: center;
-    background: #f1f1f1;
-    border-radius: 20px;
-    padding: 3px;
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding: 3px;
+  width: 140px;
+  justify-content: space-between;
 }
 
 .connect-btn, .collaborate-btn {
-    border: none;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.connect-btn {
-    background: black;
-    color: white;
+.connect-btn.active {
+  background: black;
+  color: white;
 }
 
-.collaborate-btn {
-    background: transparent;
-    color: black;
+.collaborate-btn.active {
+  background: black;
+  color: white;
+}
+
+.connect-btn:not(.active), .collaborate-btn:not(.active) {
+  background: transparent;
+  color: black;
+}
+
+.suggested-section {
+  margin-top: 7px;
+}
+
+.suggested-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.suggested-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.suggested-info {
+  flex-grow: 1;
+}
+
+.suggested-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.suggested-university {
+  font-size: 12px;
+  color: gray;
+  margin: 0;
+}
+
+.connect-suggested-btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 15px;
+  background: #e7e5db;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .right-sidebar {
+    width: 100%;
+  }
 }
 
 
+.toggle-container {
+  display: flex;
+  background: black;
+  border-radius: 30px;
+  padding: 3px;
+  width: fit-content;
+  position: relative;
+}
+
+.toggle-btn {
+  border: none;
+  padding: 5px 15px;
+  border-radius: 30px;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.toggle-btn.active {
+  background: white;
+  color: black;
   
-  .suggested-section {
-    margin-top: 7px;
+}
+
+/* Adding a sharp edge on the right-bottom of "Collaborate" */
+.collaborate-btn.active {
+  border-radius: 30px 30px 0px 30px;
+  clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+}
+
+@media (max-width:1024px){
+  .right-sidebar{
+ /* Remove extra right margin */
+    margin-right: 100px !important; 
   }
+}
+
+.right-sidebar {
+  position: relative; /* Ensures blobs are positioned relative to this */
+}
+
+.right-sidebar::before,
+.right-sidebar::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.right-sidebar::before {
+  width: 120px;
+  height: 120px;
+  background: #f6c1c1; /* Light pink blob */
+  top: -40px;
+  left: -30px;
   
-  .suggested-user {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  .suggested-pic {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .suggested-info {
-    flex-grow: 1;
-  }
-  
-  .suggested-name {
-    font-size: 14px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .suggested-university {
-    font-size: 12px;
-    color: gray;
-    margin: 0;
-  }
-  
-  .connect-suggested-btn {
-    padding: 6px 12px;
-    font-size: 12px;
-    border: none;
-    border-radius: 15px;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 768px) {
-    .right-sidebar {
-      width: 100%;
-    }
-  }
-  
+}
+
+.right-sidebar::after {
+  width: 100px;
+  height: 100px;
+  background: #a7d7c5; /* Light green blob */
+  bottom: -30px;
+  right: -20px;
+}
+

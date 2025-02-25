@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SidebarRight.css";
 import profile from '../../assets/headerImages/profile.svg'
 import firstImage from '../../assets/rightSidebarImages/firstImage.svg'
@@ -9,10 +9,9 @@ import fifthImage from '../../assets/rightSidebarImages/fifthImage.svg'
 import sixthImage from '../../assets/rightSidebarImages/sixthImage.svg'
 import seventhImage from '../../assets/rightSidebarImages/seventhImage.svg'
 
-
-
-
 const SidebarRight = () => {
+  const [active, setActive] = useState("connect");
+
   const user = {
     name: "Rahul Verma",
     designation: "Uniisphere",
@@ -39,16 +38,26 @@ const SidebarRight = () => {
         <div className="profile">
           <div className="profile-section">
             <div className="image">
-            <img src={user.profilePic} alt="Profile" className="profile-pic" />
+              <img src={user.profilePic} alt="Profile" className="profile-pic" />
             </div>
             <div className="follow-actions">
               <div className="follow-section">
                 <span>{user.followers}</span>
                 <span>{user.collaborations}</span>
               </div>
-              <div className="connect-buttons">
-                <button className="connect-btn">Connect</button>
-                <button className="collaborate-btn">Collaborate</button>
+              <div className="toggle-container">
+                <button
+                  className={`toggle-btn ${active === "connect" ? "active" : ""}`}
+                  onClick={() => setActive("connect")}
+                >
+                  Connect
+                </button>
+                <button
+                  className={`toggle-btn ${active === "collaborate" ? "active" : ""}`}
+                  onClick={() => setActive("collaborate")}
+                >
+                  Collaborate
+                </button>
               </div>
             </div>
           </div>
@@ -61,12 +70,7 @@ const SidebarRight = () => {
             </p>
           </div>
         </div>
-
       </div>
-
-
-
-
 
       <div className="suggested-section">
         <h4>Suggested</h4>
@@ -77,7 +81,17 @@ const SidebarRight = () => {
               <p className="suggested-name">{suggest.name}</p>
               <p className="suggested-university">{suggest.university}</p>
             </div>
-            <button className="connect-suggested-btn">+ CONNECT</button>
+            <button className="connect-suggested-btn">
+            <span className="color1">+</span>
+            <span> </span>
+        <span className="color2">C</span>
+        <span className="color3">O</span>
+        <span className="color4">N</span>
+        <span className="color5">N</span>
+        <span className="color6">E</span>
+        <span className="color7">C</span>
+        <span className="color8">T</span>
+            </button>
           </div>
         ))}
       </div>

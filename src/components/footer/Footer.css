@@ -32,3 +32,21 @@
         height: 35px;
     }
 }
+
+@media (min-width:375px){
+    .footer{
+        padding: 10px 40px;
+        gap: 30px;
+    }
+}
+
+@media (min-width:425px){
+    .footer{
+        padding: 10px 50px;
+        gap: 40px;
+    }
+}
+
+
+
+

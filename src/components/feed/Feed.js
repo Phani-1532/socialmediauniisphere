@@ -9,8 +9,8 @@ import fouthImage from '../../assets/images/fouthImage.png'
 import fifthImage from '../../assets/images/Analytical Thinking 1.png'
 import sixthImage from '../../assets/images/Team Management 1.png'
 import seventhImage from '../../assets/images/Problem Solving with Technology 1.png'
-import eigthImage from '../../assets/images/c4981f9170251be3bd34bdc9ae96e9fc 2.png'
-import ninthImage from '../../assets/images/c4981f9170251be3bd34bdc9ae96e9fc 2.png'
+import eigthImage from '../../assets/images/ninthImage.png'
+import ninthImage from '../../assets/images/ninthImage.png'
 const Feed = () => {
   const user = {
     name: "Vijay Prasad",

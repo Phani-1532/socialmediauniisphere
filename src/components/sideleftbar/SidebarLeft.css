@@ -1,9 +1,10 @@
 .left-sidebar {
     border-radius: 20px;
     padding: 20px;
-    width: 320px;
+    width: 350px;
     position: relative;
     overflow: hidden;
+    
   }
   
   /* Events Section */
@@ -11,13 +12,17 @@
     border-radius: 15px;
     padding: 15px;
     background-color: rgb(215, 252, 252);
+    box-shadow: 1px 2px 2px 3.5px rgba(0, 0, 0, 0.08), 
+                 0px 0px 0px rgba(0, 0, 0, 0.06);
   }
 
   .news-section {
-    margin-top: 0.3rem;
+    margin-top: 1rem;
     border-radius: 15px;
     padding: 15px;
     background-color: #f6f4e8;
+    box-shadow: 1px 2px 4px 5px rgba(0, 0, 0, 0.08), 
+                 0px 0px 1px rgba(0, 0, 0, 0.06);
   }
   
   .event-item {
@@ -98,5 +103,40 @@
   .news-description {
     font-size: 11.5px;
     color: gray;
+  }
+
+  @media(max-width:1024px){
+    .left-sidebar{
+      width: 300px;
+    }
+  }
+  
+  .left-sidebar {
+    position: relative;
+  }
+  
+  .left-sidebar::before,
+  .left-sidebar::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  
+  .left-sidebar::before {
+    width: 130px;
+    height: 130px;
+    background: #d1c1f6; /* Light purple blob */
+    top: -50px;
+    right: -30px;
+  }
+  
+  .left-sidebar::after {
+    width: 90px;
+    height: 90px;
+    background: #f6e6a1; /* Light yellow blob */
+    bottom: -30px;
+    left: -20px;
   }
   

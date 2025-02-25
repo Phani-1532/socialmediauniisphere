@@ -1,10 +1,11 @@
+/* Header Container */
 .header {
     background: #fff;
     box-shadow: 0 2px 10px rgba(17, 15, 15, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 30px;
+    padding: 6px 30px;
     border: 1px solid gray;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -13,28 +14,62 @@
     position: relative;
 }
 
+/* Navigation Icons */
 .nav-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 55px;
+    gap: 45px;
 }
 
-.nav-icons img{
-    width: 36px;
-    height: 36px;
+/* Individual Icon Container */
+.icon-container {
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
 }
 
-.nav-icons .logo{
+/* Icons */
+.icon-container img {
+    width: 38px;
+    height: 38px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Active Icon */
+.icon-container.active {
+    background: rgb(63, 62, 62);
+    border-radius: 50%;
+}
+
+.profileLogo {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+.nav-icons img {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Active icon styling */
+.active-icon {
+    filter: brightness(0) invert(0); /* Makes icon black */
+}
+
+.nav-icons .logo {
     width: 65px;
     height: 60px;
 }
 
-
+/* Profile Picture */
 .profile-pic {
     width: 39px;
 }
 
+/* Search Bar */
 .search-container {
     flex: 1;
     display: flex;
@@ -42,51 +77,96 @@
 }
 
 .search-bar {
-    width: 450px;  /* Increased width */
+    width: 450px; /* Increased width */
     border-radius: 30px;
-    border: 2px solid black;
+    border: 2px solid rgb(142, 135, 135);
     outline: none;
     font-size: 18px;
     height: 40px;
-    text-align: center; /* Center text inside input */
+    text-align: left; /* Center text inside input */
     margin: auto auto;
+    padding: 15px;
 }
 
-@media (max-width:480px){
+.search-bar::placeholder{
+    font-size: 16px;
+}
+
+@media (max-width:1024px){
+    .header {
+        padding: 10px 20px;    
+    }
 
     .nav-icons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        gap: 15px !important;
     }
-    .search-bar{
-        width: 100px;
-        padding: 0px !important;
+}
+
+@media (max-width:768px){
+    .header {
+        padding: 0;
+        border-radius: 0;
+        border: none;
+        outline: none;
+    }
+
+    .nav-icons {
+        gap: 10px !important; /* Reduce gap for better alignment */
+    }
+
+    .mobile-nav-icons{
+        display: flex;
+    }
+}
+
+/* Mobile View (Max Width: 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 0;
+        border-radius: 0;
+        border: none;
+        outline: none;
+    }
+
+    .nav-icons {
+        gap: 20px; /* Reduce gap for better alignment */
+    }
+
+    .mobile-nav{
+        padding: 0;
+    }
+
+    .mobile-nav-icons{
+        display: flex;
+    }
+
+    /* Adjust search bar for mobile */
+    .search-bar {
+        width: 200px; /* Adjust width for better fit */
+        height: 30px;
+        padding: 10px;
+    }
+
+    /* Mobile Icons Adjustments */
+    .messages {
+        width: 30px;
         height: 30px;
     }
 
-    .search-bar::placeholder{
-        content: "search...";
+    .profileLogo {
+        width: 35px !important;
+        height: 35px !important;
     }
+}
 
-    .messages{
-        width: 30px;
-        height: 36px;
+@media (min-width:375px){
+    .search-bar{
+        width: 240px;
     }
+}
 
-    .profile-pic{
-        height: 36px !important;
-    }
-
-    .notifications{
-        display: none;
-    }
-
-    .home{
-        display: none;
-    }
-
-    .add, .logo, .calender, .network{
-        display: none;
+@media (min-width:425px){
+    .search-bar{
+        width: 270px;
     }
 }
