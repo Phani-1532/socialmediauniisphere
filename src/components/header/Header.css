@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 30px;
+    padding: 5px 30px;
     border: 1px solid gray;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -15,8 +15,21 @@
 
 .nav-icons {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 55px;
 }
+
+.nav-icons img{
+    width: 36px;
+    height: 36px;
+}
+
+.nav-icons .logo{
+    width: 65px;
+    height: 60px;
+}
+
 
 .profile-pic {
     width: 39px;
@@ -34,7 +47,46 @@
     border: 2px solid black;
     outline: none;
     font-size: 18px;
-    height: 45px;
+    height: 40px;
     text-align: center; /* Center text inside input */
     margin: auto auto;
+}
+
+@media (max-width:480px){
+
+    .nav-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .search-bar{
+        width: 100px;
+        padding: 0px !important;
+        height: 30px;
+    }
+
+    .search-bar::placeholder{
+        content: "search...";
+    }
+
+    .messages{
+        width: 30px;
+        height: 36px;
+    }
+
+    .profile-pic{
+        height: 36px !important;
+    }
+
+    .notifications{
+        display: none;
+    }
+
+    .home{
+        display: none;
+    }
+
+    .add, .logo, .calender, .network{
+        display: none;
+    }
 }

@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "./components/header/Header";
-import SidebarLeft from "./components/SidebarLeft";
+import SidebarLeft from "./components/sideleftbar/SidebarLeft";
 import Feed from "./components/feed/Feed";
-import SidebarRight from "./components/SidebarRight";
+import SidebarRight from "./components/siderightbar/SidebarRight";
+import Footer from "./components/footer/Footer"; // Import Footer Component
 
 const App = () => {
   return (
@@ -23,6 +24,11 @@ const App = () => {
         <div className="d-none d-md-block col-md-3">
           <SidebarRight />
         </div>
+      </div>
+
+      {/* Footer (Visible on Mobile Only) */}
+      <div className="d-md-none">
+        <Footer />
       </div>
     </div>
   );

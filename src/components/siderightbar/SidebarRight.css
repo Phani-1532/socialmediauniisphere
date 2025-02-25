@@ -1,0 +1,174 @@
+.right-sidebar {
+    background: #f6f4e8; /* Light pastel cream background */
+    border-radius: 20px;
+    padding: 20px;
+    width: 320px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .right-sidebar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Subtle texture */
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+  }
+  
+  .profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push text left and buttons right */
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Space between profile image and text */
+}
+
+.profile-pic { 
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section{
+    display: flex;
+    gap: 25px;
+
+}
+
+.user-name {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.user-designation,
+.user-location {
+    font-size: 12px;
+    color: gray;
+    margin: 0;
+}
+
+.user-bio {
+    font-size: 12px;
+    margin-top: 5px;
+    max-width: 250px; /* Prevents long text overflow */
+}
+
+.see-more {
+    color: #007bff;
+    cursor: pointer;
+}
+
+/* Adjusted right-side layout */
+.follow-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns followers & buttons to the right */
+    gap: 10px;
+}
+
+.follow-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.connect-buttons {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+.connect-btn, .collaborate-btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.connect-btn {
+    background: black;
+    color: white;
+}
+
+.collaborate-btn {
+    background: transparent;
+    color: black;
+}
+
+
+  
+  .suggested-section {
+    margin-top: 7px;
+  }
+  
+  .suggested-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .suggested-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .suggested-info {
+    flex-grow: 1;
+  }
+  
+  .suggested-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .suggested-university {
+    font-size: 12px;
+    color: gray;
+    margin: 0;
+  }
+  
+  .connect-suggested-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 15px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .right-sidebar {
+      width: 100%;
+    }
+  }
+  
