@@ -1,0 +1,40 @@
+.header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(17, 15, 15, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    border: 1px solid gray;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin-top: 0.1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 55px;
+}
+
+.profile-pic {
+    width: 39px;
+}
+
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 450px;  /* Increased width */
+    border-radius: 30px;
+    border: 2px solid black;
+    outline: none;
+    font-size: 18px;
+    height: 45px;
+    text-align: center; /* Center text inside input */
+    margin: auto auto;
+}

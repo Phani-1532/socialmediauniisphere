@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/header/Header";
+import SidebarLeft from "./components/SidebarLeft";
+import Feed from "./components/feed/Feed";
+import SidebarRight from "./components/SidebarRight";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+      <Header />
+      <div className="row">
+        {/* Left Sidebar (Hidden on Mobile) */}
+        <div className="d-none d-md-block col-md-3">
+          <SidebarLeft />
+        </div>
+
+        {/* Feed (Main Content) */}
+        <div className="col-12 col-md-6">
+          <Feed />
+        </div>
+
+        {/* Right Sidebar (Hidden on Mobile) */}
+        <div className="d-none d-md-block col-md-3">
+          <SidebarRight />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
