@@ -107,8 +107,21 @@
 
   @media(max-width:1024px){
     .left-sidebar{
-      width: 300px;
+      width: 260px;
       margin-right: 10px !important;
+    }
+
+    .events-section h4{
+      font-size: 16px !important;
+  
+    }
+  
+    .event-date{
+      font-size: 12.5px !important;
+    }
+  
+    .read-more{
+      font-size:11px !important ;
     }
   }
   

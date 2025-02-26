@@ -1,4 +1,186 @@
+.multi-image-grid {
+    display: grid;
+    grid-template-columns: auto auto; /* Two columns: Left (Jerry) | Right (Others) */
+    gap: 0px;
+    align-items: center;
+  }
+  
+  .multi-image-grid img {
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Left Side - Jerry's Image */
+  .multi-image-grid img:first-child {
+    grid-row: span 3; /* Stretches Jerry’s image */
+    width: 145px; 
+    height: 260px;
+    object-fit: cover;
+  }
+  
+  /* Right Side Layout */
+  .multi-image-right {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Three rows */
+    gap: 10px;
+  }
+  
+  .multi-image-right img:nth-child(1), /* Top Right */
+  .multi-image-right img:nth-child(3) { /* Bottom */
+    width: 100px;
+    height: 80px;
+  }
 
+  
+  .multi-image-right .middle-images {
+    display: grid;
+    grid-template-columns: auto auto; /* Two equal columns */
+    gap: 10px;
+  }
+  
+  .multi-image-right .middle-images img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  
+  
+  .blob6 {
+    bottom: 20%;
+    left: -35px;
+    background: pink;
+  }
+  
+  .blob7 {
+    top: 20%;
+    right: -25px;
+    background: yellow;
+  }
+  
+  .blob8 {
+    bottom: 20%;
+    right: -35px;
+    background: cyan;
+  }
+  
+.blob {
+    position: absolute;
+    opacity: 0.6;
+    animation: float 6s infinite ease-in-out alternate;
+  }
+  
+  /* Randomized different shapes */
+  
+  /* Love/Heart Shape */
+  .heart-blob {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(99, 255, 112, 0.7); /* Red */
+    position: absolute;
+    left: -20px;  /* Positioned at the left middle end */
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .heart-blob::before,
+  .heart-blob::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: rgba(122, 255, 99, 0.7);
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.4;
+  }
+  .heart-blob::before {
+    top: -140px;
+    left: 240%;
+    opacity: 0.5;
+  }
+  .heart-blob::after {
+    left: -120px;
+    top: 100px;
+    opacity: 0.5;
+  }
+  
+/* Positioning square and triangle at the edges */
+.square-blob {
+    position: absolute;
+    top: 80%;
+    left: -4%;
+    opacity: 0.5;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #ffcc00;
+    z-index: 0;
+
+}
+
+.triangle-blob {
+    position: absolute;
+    top: 50%;
+    right: -8%;
+    opacity: 0.5;
+    transform: translateY(-50%) rotate(45deg);
+    width: 50px;
+    height: 50px;
+    background-color: #ff6666;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Ensure images are centered and not overlapped */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+}
+
+  
+  /* Star shape */
+  .star-blob {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 15%;
+    right: -19px;
+    border-left: 10px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid rgba(152, 251, 152, 0.7); /* Pale Green */
+    opacity: 0.7;
+    z-index: 0;
+  }
+  .star-blob::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -20px;
+    width: 0px;
+    height: 0px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid rgba(152, 251, 152, 0.7);
+  }
+  
+  /* Animation */
+  @keyframes float {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Ensure the post container is relatively positioned */
+  .post-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
 
 .post-card {
     max-width: 550px;
@@ -10,7 +192,77 @@
     box-shadow: 1px 2px 4px 6px rgba(0, 0, 0, 0.08), 
                 0px 0px 1px rgba(0, 0, 0, 0.06);
     border: 1px solid rgba(0, 0, 0, 0.08);
+    z-index: 0;
 }
+
+/* Styling for blobs */
+.blob {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(144, 238, 144, 0.6); /* Light green */
+    border-radius: 50%;
+    
+    animation: float 6s infinite ease-in-out alternate;
+  }
+  
+  /* Different sizes and colors for variation */
+  .blob1 {
+    width: 60px;
+    height: 60px;
+    background: rgba(173, 216, 230, 0.6); /* Light blue */
+    top: -20px;
+    left: -20px;
+  }
+  
+  .blob2 {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 182, 193, 0.6); /* Light pink */
+    top: 50%;
+    left: -30px;
+  }
+  
+  .blob3 {
+    width: 50px;
+    height: 50px;
+    background: rgba(152, 251, 152, 0.6); /* Pale green */
+    bottom: -25px;
+    right: -15px;
+  }
+  
+  .blob4 {
+    width: 30px;
+    height: 30px;
+    background: rgba(216, 191, 216, 0.6); /* Lavender */
+    top: 30px;
+    right: -20px;
+  }
+  
+  .blob5 {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 215, 0, 0.6); /* Gold */
+    bottom: 10px;
+    left: 40%;
+  }
+  
+  /* Animation to make them float */
+  @keyframes float {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Ensure the post container is relatively positioned */
+  .post-card {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  
 
 /* Post Header */
 .post-header {
@@ -265,6 +517,76 @@
         height: 50px !important;
     }
 
+     /* Left Side - Jerry's Image */
+  .multi-image-grid img:first-child {
+    grid-row: span 3; /* Stretches Jerry’s image */
+    width: 240px  !important; 
+    height: 330px !important;
+    object-fit: cover;
+  }
+  
+  /* Right Side Layout */
+  .multi-image-right {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Three rows */
+    gap: 10px;
+    
+  }
+  
+  .multi-image-right img:nth-child(1), /* Top Right */
+  .multi-image-right img:nth-child(3) { /* Bottom */
+    width: 150px !important;
+    height: 80px !important;
+  }
+
+  
+  .multi-image-right .middle-images {
+    display: grid;
+    grid-template-columns: auto auto; /* Two equal columns */
+    gap: 10px;
+  }
+  
+  .multi-image-right .middle-images img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+}
+
+@media (max-width:1440px){
+     /* Left Side - Jerry's Image */
+  .multi-image-grid img:first-child {
+    grid-row: span 3; /* Stretches Jerry’s image */
+    width: 215px !important; 
+    height: 300px !important;
+    object-fit: cover;
+  }
+  
+  /* Right Side Layout */
+  .multi-image-right {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Three rows */
+    gap: 10px;
+  }
+  
+  .multi-image-right img:nth-child(1), /* Top Right */
+  .multi-image-right img:nth-child(3) { /* Bottom */
+    width: 170px !important;
+    height: 90px !important;
+  }
+
+  
+  .multi-image-right .middle-images {
+    display: grid;
+    grid-template-columns: auto auto; /* Two equal columns */
+    gap: 10px;
+  }
+  
+  .multi-image-right .middle-images img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
 }
 
 /* Mobile Screens */
@@ -272,7 +594,7 @@
 
 
     .post-card{
-        margin-left: 30px !important;
+        margin-left: 10px !important;
     }
 
     .connect-btn{
@@ -359,7 +681,7 @@
 @media (min-width:425px){
 
     .post-card{
-        margin-left: 30px !important;
+        margin-left:0px !important;
     }
     .user-name{
         margin-left: 0 !important;
@@ -396,7 +718,7 @@
 
 @media (min-width:375px){
     .post-card{
-        margin-left: 10px !important;
+        margin-left: 0px !important;
     }
 
     .connect-btn{

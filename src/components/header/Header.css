@@ -10,6 +10,7 @@
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     margin-top: 0.1rem;
+    margin-left: 60px !important;
     cursor: pointer;
     position: relative;
 }
@@ -138,6 +139,7 @@
         border: none;
         outline: none;
         box-shadow: none;
+        margin-right: 40px !important;
     }
 
     .nav-icons {
@@ -200,3 +202,5 @@
         margin-left: 60px !important;
     }
 }
+
+

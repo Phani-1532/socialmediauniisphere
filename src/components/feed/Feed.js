@@ -11,6 +11,10 @@ import sixthImage from '../../assets/images/Team Management 1.png'
 import seventhImage from '../../assets/images/Problem Solving with Technology 1.png'
 import eigthImage from '../../assets/images/ninthImage.png'
 import ninthImage from '../../assets/images/ninthImage.png'
+import Duck from '../../assets/images/1732187508671-325022206217369611306360986715410808678 1.png'
+import BitCoin from '../../assets/images/5c306e71eea40ad8729d3545bb69b8c4 1.png'
+import Tree from '../../assets/images/Eve 1.png'
+import Soilder from '../../assets/images/soldier-boy-character-videogame 1.png'
 const Feed = () => {
   const user = {
     name: "Vijay Prasad",
@@ -52,13 +56,15 @@ const Feed = () => {
     },
     {
       id: 8,
-      image: eigthImage,
+      images: [eigthImage, Duck, BitCoin, Tree, Soilder], // Add extra images here
     },
     {
       id: 9,
       image: ninthImage,
     },
   ];
+  
+  
 
   return (
     <div className="feed-container">
@@ -67,15 +73,17 @@ const Feed = () => {
           key={post.id}
           user={user.name}
           profilePic={user.profilePic}
-          time={user.time}  
-          work={user.work}  
-          image={post.image}
+          time={user.time}
+          work={user.work}
+          images={post.images || [post.image]}  // Handle single vs multiple images
           caption={user.caption}
           likes={user.likes}
         />
       ))}
     </div>
   );
+  
+  
 };
 
 export default Feed;
