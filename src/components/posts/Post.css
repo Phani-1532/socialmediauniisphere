@@ -1,6 +1,8 @@
+
+
 .post-card {
     max-width: 550px;
-    margin: auto;
+   
     overflow: hidden;
     background: #fff;
     border-radius: 15px;
@@ -14,15 +16,17 @@
 .post-header {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px !important;
     padding: 10px;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 .profile-pic {
     width: 40px !important;
     height: 40px !important;
     border-radius: 50% !important;
+    margin-right: 10px !important;
 }
 
 .user-info-container {
@@ -35,7 +39,8 @@
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 10px;
+   
+   
 }
 
 .time {
@@ -69,6 +74,11 @@
     padding: 10px;
 }
 
+.post-actions{
+    display: flex !important;
+    justify-content: space-between!important;
+}
+
 /* ✅ Default: Connect button in footer (Desktop View) */
 .connect-btn {
     font-size: 15px;
@@ -82,7 +92,24 @@
     align-items: center;
     padding: 6px 12px;
     border-radius: 15px;
+    display: none;
 }
+
+.connect-btn1{
+    font-size: 15px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #e6eaed !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 15px;
+}
+
+
 
 /* ✅ Likes count (Hidden by default, only appears in mobile) */
 .likes-count {
@@ -94,25 +121,53 @@
 
 /* ✅ Mobile Screens */
 @media (max-width: 768px) {
+
+    .post-card{
+        width: 270px !important;
+        padding: 5px !important;
+    }
     .post-header {
-        flex-wrap: nowrap;
+        flex-wrap: nowrap !important;
     }
 
     .user-name {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 14px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 1px !important;
+        font-size: 11px !important;
+        
+    }
+
+    .caption{
+        font-size: 13px !important;
     }
 
     /* ✅ Move Connect button next to username in mobile */
     .post-header .connect-btn {
-        font-size: 12px;
-        padding: 5px 10px;
-        margin-left: 10px;
+        font-size: 11px !important;
+        padding: 5px 10px !important;
+        margin-left: 10px !important;
         background: #e6eaed !important;
-        border-radius: 15px;
-        display: flex;
+        border-radius: 15px !important;
+        display: flex !important;
+    }
+
+    #pic{
+    
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .user-info{
+        font-size: 10px;
+    }
+
+    .time{
+        font-size: 7px !important;
+    }
+
+    .connect-btn{
+        font-size: 8px !important;
     }
 
     /* ✅ Likes text appears in footer (replaces connect button) */
@@ -178,18 +233,36 @@
   
 
 /* Tablet Screens */
-@media (max-width:1024px) {
+@media (min-width:1024px) {
     .post-card {
-        max-width: 400px !important;
-        margin-right: 0px !important;
+        max-width: 850px !important;
+    }
+
+    .post-header{
+        gap: 0px !important;
     }
 
      .connect-btn {
-        display: block;
+        display: none !important;
+    }
+
+    
+    .connect-btn1 .color1{
+        font-size: 17px !important;
+    }
+
+    .connect-btn1{
+        display: block !important;
+        margin-right: 160px;
     }
 
     .likes-count {
         display: none;
+    }
+
+    #pic{
+        width: 50px !important;
+        height: 50px !important;
     }
 
 }
@@ -197,9 +270,19 @@
 /* Mobile Screens */
 @media (max-width:480px) {
 
+
+    .post-card{
+        margin-left: 30px !important;
+    }
+
     .connect-btn{
         font-size: 8px !important;
         padding: 1px  !important;
+        display: block;
+    }
+
+    .connect-btn1{
+        display: none;
     }
 
     .color1{
@@ -229,6 +312,10 @@
 
     .caption strong {
         font-size: 12px !important;
+    }
+
+    .likes-count{
+        font-size: 11px;
     }
 }
 
@@ -270,6 +357,10 @@
 }
 
 @media (min-width:425px){
+
+    .post-card{
+        margin-left: 30px !important;
+    }
     .user-name{
         margin-left: 0 !important;
     }
@@ -282,9 +373,17 @@
     #pic{
         margin-right: 0px !important;
     }
+
+    .connect-btn{
+        display: block;
+    }
+
+    .connect-btn1{
+        display: none;
+    }
 }
 
-@media (max-width:1024px){
+@media (min-width:1024px){
     .connect-btn{
         font-size: 8px !important;
         padding: 10px !important;
@@ -292,5 +391,19 @@
 
     .color1{
         font-size: 7px !important;
+    }
+}
+
+@media (min-width:375px){
+    .post-card{
+        margin-left: 10px !important;
+    }
+
+    .connect-btn{
+        display: block;
+    }
+
+    .connect-btn1{
+        display: none;
     }
 }

@@ -17,7 +17,8 @@ const Feed = () => {
     profilePic: vijayLogo,
     caption: "Been have evolved to go in the university and will probably prefer the university of... more",
     work: "University of Delhi| Works at Google",
-    time:"18h"
+    time:"18h",
+    likes:"4022"
   };
 
   const posts = [
@@ -70,6 +71,7 @@ const Feed = () => {
           work={user.work}  
           image={post.image}
           caption={user.caption}
+          likes={user.likes}
         />
       ))}
     </div>

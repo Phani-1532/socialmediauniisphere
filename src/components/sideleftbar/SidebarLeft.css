@@ -108,6 +108,7 @@
   @media(max-width:1024px){
     .left-sidebar{
       width: 300px;
+      margin-right: 10px !important;
     }
   }
   
@@ -140,3 +141,54 @@
     left: -20px;
   }
   
+  @media(max-width:768px){
+    .left-sidebar{
+      width: 220px !important;
+    }
+
+    .events-section h4{
+      font-size: 16px;
+    }
+
+    .events-section img{
+      width: 30px !important;
+      height: 30px !important;
+    }
+
+    .event-date{
+      font-size: 11.5px;
+    }
+
+    .event-university{
+      font-size: 10px !important;
+      padding-right: 10px !important;
+    }
+
+    .read-more{
+      font-size: 8px;
+      padding-left: 10px;
+    }
+
+    .see-all-btn{
+      font-size: 10px !important;
+    }
+
+    .news-section h4{
+      font-size: 16px !important;
+    }
+
+    .news-pic{
+      width: 30px !important;
+      height: 30px !important;
+    }
+
+    .news-title{
+      font-size: 11px !important;
+    }
+
+    .news-description{
+      font-size: 9px !important;
+    }
+
+
+  }

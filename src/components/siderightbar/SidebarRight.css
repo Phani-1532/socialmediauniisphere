@@ -11,6 +11,21 @@
     border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+.right-sidebar::before {
+  width: 200px !important; /* Reduce size */
+  height: 100px !important;
+  top: -20px !important; /* Move closer */
+  left: 0px !important;
+}
+
+.right-sidebar::after {
+  width: 80px !important; /* Reduce size */
+  height: 80px !important;
+  bottom: -20px !important; /* Move closer */
+  right: -10px !important;
+}
+
+
 
 .profile-card {
   display: flex;
@@ -176,10 +191,105 @@
 
 @media (max-width: 768px) {
   .right-sidebar {
-    width: 100%;
+    width: 120% !important; /* Adjust width */
+    margin-left: -20% !important; /* Move further to the left */
+    margin-right: auto !important; /* Align properly */
+    padding: 12px !important; /* Reduce padding */
+  }
+
+  .profile-pic {
+    width: 50px !important; /* Adjust profile pic size */
+    height: 50px !important;
+  }
+
+  /* ✅ Follow section is now above the button */
+  .follow-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px !important;
+  }
+
+  .follow-section {
+    order: -1 !important; /* Move above the button */
+    display: flex;
+    justify-content: center;
+    gap: 10px !important;
+    font-size: 12px !important;
+    font-weight: bold;
+  }
+
+  /* ✅ Fix button width */
+  .toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important; /* Make the container full-width */
+  }
+
+  .toggle-container button {
+    width: 60% !important; /* Button takes 50% width */
+    font-size: 8px !important;
+    text-align: center !important;
+  }
+
+  /* ✅ Adjust the blob positions */
+  .right-sidebar::before {
+    width: 90px !important;
+    height: 90px !important;
+    top: -25px !important;
+    left: -40px !important; /* Move blob further to left */
+  }
+
+  .right-sidebar::after {
+    width: 70px !important;
+    height: 70px !important;
+    bottom: -20px !important;
+    right: -15px !important;
   }
 }
 
+
+
+@media (max-width: 768px) {
+  .suggested-section {
+    margin-top: 8px !important;
+    padding: 8px !important;
+  }
+
+  .suggested-user {
+    display: flex;
+    align-items: center;
+    padding: 6px !important;
+    border-radius: 6px !important;
+    gap: 6px !important; /* Reduce spacing */
+  }
+
+  .suggested-pic {
+    width: 30px !important; /* Smaller profile image */
+    height: 30px !important;
+    border-radius: 50%;
+  }
+
+  .suggested-info {
+    flex-grow: 1;
+    font-size: 11px !important;
+  }
+
+  .suggested-name {
+    font-size: 12px !important; /* Reduce font size */
+  }
+
+  .suggested-university {
+    font-size: 10px !important; /* Reduce font size */
+  }
+
+  .connect-suggested-btn {
+    padding: 3px 6px !important; /* Reduce padding */
+    font-size: 10px !important; /* Decrease text size */
+    border-radius: 10px !important; /* Adjust border radius */
+  }
+}
 
 .toggle-container {
   display: flex;
@@ -289,3 +399,31 @@
   color: #DA3E39 !important;
 }
 
+
+@media (max-width:768px){
+  .right-sidebar{
+    margin-left: 0px !important;
+  }
+
+  .profile-pic{
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .follow-section span{
+    font-size: 10px !important;
+  }
+
+  .toggle-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toggle-container button{
+    width: 45px !important;
+    font-size: 7px !important;
+    text-align: left;
+  }
+
+}
