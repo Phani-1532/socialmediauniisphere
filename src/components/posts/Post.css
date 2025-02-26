@@ -13,8 +13,8 @@
   /* Left Side - Jerry's Image */
   .multi-image-grid img:first-child {
     grid-row: span 3; /* Stretches Jerry’s image */
-    width: 145px; 
-    height: 260px;
+    width: 145px !important; 
+    height: 260px !important;
     object-fit: cover;
   }
   
@@ -27,8 +27,8 @@
   
   .multi-image-right img:nth-child(1), /* Top Right */
   .multi-image-right img:nth-child(3) { /* Bottom */
-    width: 100px;
-    height: 80px;
+    width: 100px !important;
+    height: 80px !important;
   }
 
   
@@ -39,8 +39,8 @@
   }
   
   .multi-image-right .middle-images img {
-    width: 45px;
-    height: 45px;
+    width: 45px !important;
+    height: 45px !important;
   }
   
   
@@ -431,7 +431,47 @@
     .post-footer .connect-btn {
         display: none;
     }
+
+    
 }
+
+@media screen and (max-width: 768px) {
+  .multi-image-grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+  }
+
+  .multi-image-grid img:first-child {
+      width: 70px !important;  /* Reduced further */
+      height: 120px !important;
+  }
+
+  .multi-image-right {
+      display: flex;
+      flex-wrap: nowrap; /* Ensures images stay in a row */
+      gap: 5px;
+  }
+
+  .multi-image-right img {
+      width: 40px !important; /* Smaller images */
+      height: 40px !important;
+  }
+
+  .multi-image-right .middle-images {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+  }
+
+  .multi-image-right .middle-images img {
+      width: 25px !important;
+      height: 25px !important;
+  }
+}
+
 
 /* Post Actions */
 .post-actions {
@@ -638,6 +678,39 @@
 
     .likes-count{
         font-size: 11px;
+    }
+
+    .multi-image-grid img:first-child {
+      grid-row: span 3; /* Stretches Jerry’s image */
+      width: 140px  !important; 
+      height: 260px !important;
+      object-fit: cover;
+    }
+    
+    /* Right Side Layout */
+    .multi-image-right {
+      display: grid;
+      grid-template-rows: auto auto auto; /* Three rows */
+      gap: 10px;
+      
+    }
+    
+    .multi-image-right img:nth-child(1), /* Top Right */
+    .multi-image-right img:nth-child(3) { /* Bottom */
+      width: 100px !important;
+      height: 80px !important;
+    }
+  
+    
+    .multi-image-right .middle-images {
+      display: grid;
+      grid-template-columns: auto auto; /* Two equal columns */
+      gap: 10px;
+    }
+    
+    .multi-image-right .middle-images img {
+      width: 40px !important;
+      height:40px !important;
     }
 }
 
