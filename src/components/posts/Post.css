@@ -133,7 +133,49 @@
     font-size: 18px;
     cursor: pointer;
     color: gray;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
+.color3 {
+    color: #DA3E39 !important;
+  }
+  
+  .color1 {
+    color: #38A3AC !important;
+    font-size: 18px;
+  }
+  
+  .color4 {
+    color: #DFC462 !important;
+  }
+  
+  .color5 {
+    color: #889095 !important;
+  }
+  
+  .color6 {
+    color: #E9877A !important;
+  }
+  
+  .color7 {
+    color: #A7829D !important;
+  }
+  
+  .color8 {
+    color: #E87F72 !important;
+  }
+  
+  .color2 {
+    color: #38A3AC !important;
+  }
+  
+  .color10 {
+    color: #DA3E39 !important;
+  }
+  
 
 /* Tablet Screens */
 @media (max-width:1024px) {
@@ -154,6 +196,16 @@
 
 /* Mobile Screens */
 @media (max-width:480px) {
+
+    .connect-btn{
+        font-size: 8px !important;
+        padding: 1px  !important;
+    }
+
+    .color1{
+        font-size: 10px !important;
+    }
+
     #pic {
         width: 34px !important;
         height: 35px !important;
@@ -164,7 +216,7 @@
     }
 
     .time {
-        font-size: 8px !important;
+        font-size: 7.5px !important;
     }
 
     .user-info {
@@ -177,5 +229,68 @@
 
     .caption strong {
         font-size: 12px !important;
+    }
+}
+
+.color3 {
+    color: #DA3E39 !important;
+}
+
+.color1 {
+    color: #38A3AC !important;
+    font-size: 18px;
+}
+
+.color4 {
+    color: #DFC462 !important;
+}
+
+.color5 {
+    color: #889095 !important;
+}
+
+.color6 {
+    color: #E9877A !important;
+}
+
+.color7 {
+    color: #A7829D !important;
+}
+
+.color8 {
+    color: #E87F72 !important;
+}
+
+.color2 {
+    color: #38A3AC !important;
+}
+
+.color10 {
+    color: #DA3E39 !important;
+}
+
+@media (min-width:425px){
+    .user-name{
+        margin-left: 0 !important;
+    }
+
+    .post-header{
+        display: flex !important;
+        gap: 0px !important;
+    }
+
+    #pic{
+        margin-right: 0px !important;
+    }
+}
+
+@media (max-width:1024px){
+    .connect-btn{
+        font-size: 8px !important;
+        padding: 10px !important;
+    }
+
+    .color1{
+        font-size: 7px !important;
     }
 }

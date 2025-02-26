@@ -142,7 +142,7 @@
 
     /* Adjust search bar for mobile */
     .search-bar {
-        width: 200px; /* Adjust width for better fit */
+        width: 210px; /* Adjust width for better fit */
         height: 30px;
         padding: 10px;
     }
@@ -168,5 +168,13 @@
 @media (min-width:425px){
     .search-bar{
         width: 270px;
+    }
+}
+
+
+@media (max-width:1024px){
+    .header{
+        padding: 10px 20px !important;
+        margin-left: 60px !important;
     }
 }
