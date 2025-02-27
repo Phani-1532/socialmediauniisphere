@@ -91,8 +91,6 @@
     width: 280px !important;
     margin-left: 30px !important;
    
-    
-   
   }
 
 
@@ -144,6 +142,12 @@
     margin-left:130px !important ;
   }
   
+}
+
+@media (max-width:991px){
+  .sidebar-right{
+    left: 140px ;
+  }
 }
 
 
