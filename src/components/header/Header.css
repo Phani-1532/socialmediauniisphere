@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6px 0px;
+    padding: 6px 0px !important;
     border: 1px solid gray;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -120,7 +120,8 @@
     }
 
     .search-bar {
-        width: 180px !important; /* Adjust width for better fit */
+        width: 200px !important; /* Adjust width for better fit */
+        height: 20px !important;
     }
 
     .nav-icons img {
@@ -149,7 +150,8 @@
     }
 
     .mobile-nav {
-        padding-right: 120px;
+        padding-right: 1px;
+        height: 50px !important;
     }
 
     .mobile-nav-icons {
@@ -159,8 +161,8 @@
     /* Adjust search bar for mobile */
     .search-bar {
         width: 210px;
-        height: 30px;
-        padding: 10px;
+        height: 40px;
+        padding: 15px;
     }
 
     /* Mobile Icons Adjustments */
@@ -183,6 +185,7 @@
     .header {
         box-shadow: none;
         margin-right: 40px !important;
+        padding: 20px !important;
     }
 }
 

@@ -112,7 +112,7 @@
   @media(max-width:1024px){
     .left-sidebar{
       width: 260px;
-      margin-right: 10px !important;
+      margin-left: -65px !important;
       height: auto !important;
     }
 
@@ -131,6 +131,14 @@
 
     .news-item{
       margin-bottom: 30px !important;
+    }
+
+    .news-title{
+      font-size: 12px !important;
+    }
+
+    .news-description{
+      font-size: 10px !important;
     }
 
     

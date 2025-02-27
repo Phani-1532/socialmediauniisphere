@@ -63,30 +63,33 @@
   }
 
   .feed-container {
-      margin-left: 0;
-      margin-right: 0;
+      margin-left: 300px !important;
+      margin-right: 300px !important;
       padding: 10px;
   }
+
+  
 }
 
 @media (max-width:1024px){
   .feed-container {
-    margin-left: 207px !important; /* Prevents overlap with fixed left sidebar */
+    margin-right: 285px !important; /* Prevents overlap with fixed left sidebar */
     width: 150px !important;
  
   }
 
   .sidebar-right {
    /* Below the header */
-   width: 250px !important;
-    right: 200px !important;
+   width: 220px !important;
+    right: 90px !important;
     
    
   }
 
   .sidebar-left {
     /* Below the header */
-    width: 220px !important;
+    width: 280px !important;
+    margin-left: 30px !important;
    
     
    
@@ -96,22 +99,56 @@
 }
 
 @media (max-width:1440px){
+
+  
   .sidebar-right{
-    right: 100px !important;
+    right: 160px !important;
   }
 
   .sidebar-left{
-    left: 80px !important;
+    left: 60px !important;
   }
 
   .header {
     padding: 0 100px !important; /* Balanced spacing */
   }
+
+  .feed-container{
+    margin-left: 240px !important;
+  }
 }
 
 @media (max-width:480px){
   .feed-container{
-    margin-left:0px !important ;
+    margin-left:157px !important ;
   }
+  
 }
+
+@media (max-width:375px){
+  .feed-container{
+    margin-left:157px !important ;
+  }
+  
+}
+
+@media (max-width:425px){
+  .feed-container{
+    margin-left:140px !important ;
+  }
+  
+}
+
+@media (max-width:320px){
+  .feed-container{
+    margin-left:118px !important ;
+  }
+  
+}
+
+
+
+
+
+
 

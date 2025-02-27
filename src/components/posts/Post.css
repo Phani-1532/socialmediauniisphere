@@ -436,6 +436,10 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .post-card{
+    margin-right: -90px !important;
+  }
   .multi-image-grid {
       display: flex;
       flex-direction: row;
@@ -469,6 +473,10 @@
   .multi-image-right .middle-images img {
       width: 25px !important;
       height: 25px !important;
+  }
+
+  .user-name{
+    margin-right: -0.5rem !important;
   }
 }
 
@@ -529,8 +537,9 @@
   .post-card {
     width: 300% !important; /* Reduce post width */
     max-width: 500px !important; /* Decrease max width */
-    padding: 10px !important; /* Reduce padding */
+    padding: 5px !important; /* Reduce padding */
 }
+
 
     .post-header{
         gap: 0px !important;
@@ -632,7 +641,7 @@
   .post-card {
     width: 300% !important; /* Reduce post width */
     max-width: 500px !important; /* Decrease max width */
-    padding: 10px !important; /* Reduce padding */
+    padding: 5px !important; /* Reduce padding */
 }
 
 .connect-btn1{
