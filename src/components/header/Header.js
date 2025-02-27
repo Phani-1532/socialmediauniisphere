@@ -36,7 +36,7 @@ const Header = () => {
               className={`icon-container ${activeIcon === "home" ? "active" : ""}`}
               onClick={() => handleIconClick("home")}
             >
-              <img src={Home} alt="Home" />
+              <img src={Home} alt='Home' />
             </div>
             <div
               className={`icon-container ${activeIcon === "network" ? "active" : ""}`}

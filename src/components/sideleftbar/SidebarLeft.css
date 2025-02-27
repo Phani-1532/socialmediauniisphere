@@ -1,7 +1,8 @@
 .left-sidebar {
     border-radius: 20px;
-    padding: 20px;
+    padding: 15px;
     width: 350px;
+    height: auto;
     position: relative;
     overflow: hidden;
     
@@ -10,16 +11,16 @@
   /* Events Section */
   .events-section{
     border-radius: 15px;
-    padding: 15px;
+    padding: 10px;
     background-color: rgb(215, 252, 252);
     box-shadow: 1px 2px 2px 3.5px rgba(0, 0, 0, 0.08), 
                  0px 0px 0px rgba(0, 0, 0, 0.06);
   }
 
   .news-section {
-    margin-top: 1rem;
+    margin-top: 0.7rem;
     border-radius: 15px;
-    padding: 15px;
+    padding: 10px;
     background-color: #f6f4e8;
     box-shadow: 1px 2px 4px 5px rgba(0, 0, 0, 0.08), 
                  0px 0px 1px rgba(0, 0, 0, 0.06);
@@ -29,7 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 3px 0;
   }
   
   .event-pic {
@@ -44,13 +45,13 @@
   }
   
   .event-date {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     margin: 0;
   }
   
   .event-university {
-    font-size: 12px;
+    font-size: 11px;
     color: gray;
     margin: 0;
   }
@@ -69,7 +70,7 @@
     border-right: none;
     border-left: none;
     padding: 10px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     cursor: pointer;
   }
@@ -79,7 +80,10 @@
     display: flex;
     align-items: center;
     margin-top: 10px;
+    margin-bottom: 20px !important;
     align-items: flex-start;
+    height: 40px;
+
   }
   
   .news-pic {
@@ -109,6 +113,7 @@
     .left-sidebar{
       width: 260px;
       margin-right: 10px !important;
+      height: auto !important;
     }
 
     .events-section h4{
@@ -123,6 +128,12 @@
     .read-more{
       font-size:11px !important ;
     }
+
+    .news-item{
+      margin-bottom: 30px !important;
+    }
+
+    
   }
   
   .left-sidebar {
@@ -204,4 +215,10 @@
     }
 
 
+  }
+
+  @media (min-width:1440px){
+    .left-sidebar{
+      width: 400px !important;
+    }
   }

@@ -183,7 +183,7 @@
   
 
 .post-card {
-    max-width: 550px;
+    max-width: 850px !important;
    
     overflow: hidden;
     background: #fff;
@@ -526,9 +526,11 @@
 
 /* Tablet Screens */
 @media (min-width:1024px) {
-    .post-card {
-        max-width: 850px !important;
-    }
+  .post-card {
+    width: 300% !important; /* Reduce post width */
+    max-width: 500px !important; /* Decrease max width */
+    padding: 10px !important; /* Reduce padding */
+}
 
     .post-header{
         gap: 0px !important;
@@ -545,7 +547,7 @@
 
     .connect-btn1{
         display: block !important;
-        margin-right: 160px;
+        margin-right: 70px;
     }
 
     .likes-count {
@@ -593,7 +595,7 @@
 
 }
 
-@media (max-width:1440px){
+@media (min-width:1440px){
      /* Left Side - Jerry's Image */
   .multi-image-grid img:first-child {
     grid-row: span 3; /* Stretches Jerry’s image */
@@ -626,8 +628,23 @@
     width: 60px !important;
     height: 60px !important;
   }
+
+  .post-card {
+    width: 300% !important; /* Reduce post width */
+    max-width: 500px !important; /* Decrease max width */
+    padding: 10px !important; /* Reduce padding */
+}
+
+.connect-btn1{
+  margin-right: 210px !important;
+}
+
+
+
   
 }
+
+
 
 /* Mobile Screens */
 @media (max-width:480px) {
@@ -657,15 +674,17 @@
     }
 
     .user-name {
-        font-size: 12px !important;
+        font-size: 8px !important;
+        margin-left: -1rem !important;
     }
 
     .time {
-        font-size: 7.5px !important;
+        font-size: 7px !important;
     }
 
     .user-info {
         font-size: 9px !important;
+        margin-left: -1rem !important;
     }
 
     .post-body p {
@@ -757,7 +776,12 @@
         margin-left:0px !important;
     }
     .user-name{
-        margin-left: 0 !important;
+        margin-left: 0.2rem !important;
+        font-size:8.5px !important;
+    }
+
+    .time{
+      margin-left: 0.5rem !important;
     }
 
     .post-header{
@@ -801,4 +825,19 @@
     .connect-btn1{
         display: none;
     }
+
+    .user-name{
+      margin-left: -0.6rem !important;
+      font-size:8.5px !important;
+  }
+
+  .time{
+    margin-left: 0.5rem !important;
+  }
+
+  .user-info{
+    margin-left: -0.6rem !important;
+  }
+
+  
 }

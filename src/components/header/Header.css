@@ -5,12 +5,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6px 30px;
+    padding: 6px 0px;
     border: 1px solid gray;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     margin-top: 0.1rem;
-    margin-left: 60px !important;
+    margin-left: 10px !important;
     cursor: pointer;
     position: relative;
 }
@@ -20,12 +20,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 45px;
+    gap: 50px;
 }
 
 /* Individual Icon Container */
 .icon-container {
-    padding: 10px;
+    padding: 5px;
     border-radius: 50%;
     transition: background 0.3s ease-in-out;
 }
@@ -37,10 +37,16 @@
     transition: 0.3s ease-in-out;
 }
 
-/* Active Icon */
-.icon-container.active {
-    background: rgb(63, 62, 62);
-    border-radius: 50%;
+/* Active Icon - Change color (including inner whitespace) */
+.icon-container.active img {
+    filter: invert(40%) sepia(60%) saturate(500%) hue-rotate(200deg) brightness(85%) contrast(95%);
+    mix-blend-mode: multiply;
+}
+
+/* Default active home icon */
+.icon-home img {
+    filter: invert(40%) sepia(60%) saturate(500%) hue-rotate(200deg) brightness(85%) contrast(95%);
+    mix-blend-mode: multiply;
 }
 
 .profileLogo {
@@ -57,9 +63,10 @@
 
 /* Active icon styling */
 .active-icon {
-    filter: brightness(0) invert(0); /* Makes icon black */
+    filter: brightness(0) invert(0);
 }
 
+/* Logo */
 .nav-icons .logo {
     width: 65px;
     height: 60px;
@@ -89,43 +96,39 @@
     padding: 15px;
 }
 
-.search-bar::placeholder{
+.search-bar::placeholder {
     font-size: 16px;
 }
 
-@media (max-width:1024px){
+@media (max-width:1024px) {
     .header {
-        padding: 10px 20px;    
+        padding: 10px 20px;
     }
 
-    .nav-icons{
+    .nav-icons {
         gap: 15px !important;
     }
 }
 
-@media (max-width:768px){
-    
-
+@media (max-width:768px) {
     .nav-icons {
         gap: 7px !important; /* Reduce gap for better alignment */
-
     }
 
-    .mobile-nav-icons{
+    .mobile-nav-icons {
         display: flex;
     }
-
 
     .search-bar {
         width: 180px !important; /* Adjust width for better fit */
     }
 
-    .nav-icons img{
+    .nav-icons img {
         height: 30px !important;
         width: 30px !important;
     }
 
-    .logo{
+    .logo {
         width: 40px !important;
         height: 40px !important;
     }
@@ -134,29 +137,28 @@
 /* Mobile View (Max Width: 480px) */
 @media (max-width: 480px) {
     .header {
-        padding: 0;
+        padding: 10px !important;
         border-radius: 0;
         border: none;
         outline: none;
-        box-shadow: none;
         margin-right: 40px !important;
     }
 
     .nav-icons {
-        gap: 20px; /* Reduce gap for better alignment */
+        gap: 20px;
     }
 
-    .mobile-nav{
-        padding-right: 20px;
+    .mobile-nav {
+        padding-right: 120px;
     }
 
-    .mobile-nav-icons{
+    .mobile-nav-icons {
         display: flex;
     }
 
     /* Adjust search bar for mobile */
     .search-bar {
-        width: 210px; /* Adjust width for better fit */
+        width: 210px;
         height: 30px;
         padding: 10px;
     }
@@ -173,34 +175,37 @@
     }
 }
 
-@media (min-width:375px){
-    .search-bar{
+@media (min-width:375px) {
+    .search-bar {
         width: 240px;
     }
 
-    .header{
+    .header {
         box-shadow: none;
         margin-right: 40px !important;
     }
 }
 
-@media (min-width:425px){
-    .search-bar{
+@media (min-width:425px) {
+    .search-bar {
         width: 270px;
     }
 
-    .header{
+    .header {
         box-shadow: none;
         margin-right: 40px !important;
     }
 }
 
-
-@media (max-width:1024px){
-    .header{
+@media (max-width:1024px) {
+    .header {
         padding: 10px 20px !important;
         margin-left: 60px !important;
     }
 }
 
-
+@media (max-width:1440px) {
+    .header {
+        padding: 0px !important;
+    }
+}

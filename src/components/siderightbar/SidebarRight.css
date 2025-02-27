@@ -5,7 +5,7 @@
   overflow: hidden;
   margin-top: 20px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 1px 2px 4px 6px rgba(0, 0, 0, 0.08), 
                  0px 0px 1px rgba(0, 0, 0, 0.06);
     border: 1px solid rgba(0, 0, 0, 0.08);
@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px; /* Space between profile image and text */
+  gap: 0px; /* Space between profile image and text */
   text-align: left;
 }
 
@@ -56,11 +56,11 @@
 
 .profile-section{
   display: flex;
-  gap: 25px;
+  gap: 30px;
 }
 
 .user-name {
-  font-size: 23px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
 }
@@ -80,7 +80,7 @@
 
 .user-bio {
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 2px;
   max-width: 250px; /* Prevents long text overflow */
 }
 
@@ -141,14 +141,14 @@
 }
 
 .suggested-section {
-  margin-top: 7px;
+  margin-top: -5px;
 }
 
 .suggested-user {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 2px;
+  padding: 2px;
   border-radius: 10px;
 }
 
@@ -164,13 +164,13 @@
 }
 
 .suggested-name {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   margin: 0;
 }
 
 .suggested-university {
-  font-size: 12px;
+  font-size: 11px;
   color: gray;
   margin: 0;
 }
